@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Checking Palindrome</title>
+</head>
+<body>
+    <input type="text" placeholder="Enter any word" id="text"/>
+    <input type="submit" value="Check" onclick="palindrome()">
+
+    <script>
+        function palindrome()
+        {
+            revString="";
+            inputString=document.getElementById("text").value;
+            i = inputString.length;
+
+            for(var j = i ; j>=0 ;j--){
+                revString = revString + inputString.charAt(j);
+            }
+
+            if(inputString == revString){
+                alert(inputString + " is Palindrome");
+            }
+            else
+            {
+                alert(inputString + " is not Palindrome");
+            }
+        }
+    
+    </script>
+</body>
+</html>
